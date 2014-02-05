@@ -8,6 +8,7 @@
 <body>
   <h1>Welcome to the Sudoku Domain!</h1>
   <section id="sudoku">
+  <form action="/" method="post">
     <!-- One section for each row -->
     <% 3.times do |row| %>
       <section class="row">
@@ -31,6 +32,8 @@
       <% end %>
       </section>
     <% end %>
+      <button>Check Solution</button>
+    </form>
   </section>
 </body>
 </html>
