@@ -11,4 +11,16 @@ section.box, section.cell {
 .cell input {
   width: 30px;
   height: 30px;
+  border: 1px solid #b3241b;
+}
+
+#sudoku {
+  font-size: 0;
+  text-align: center;
+  margin-top: 22%;
+}
+
+body {
+  text-align: center;
+  font-family: 'Shojumaru', cursive;
 }
