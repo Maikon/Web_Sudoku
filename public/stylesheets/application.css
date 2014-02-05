@@ -1,0 +1,14 @@
+html {
+  background: url(../img/SHADOW-SAMURAI.jpg) no-repeat center 26% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+section.box, section.cell {
+  display: inline-block;
+}
+
+.cell input {
+  width: 30px;
+  height: 30px;
+}
