@@ -1,1 +1,32 @@
-Hello, Sudoku!!
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/stylesheets/application.css" type="text/css">
+  <title>Sudoku Game</title>
+</head>
+<body>
+  <section id="sudoku">
+    <!-- One section for each row -->
+    <% 3.times do |row| %>
+      <section class="row">
+      <!-- We want to create separate div elements for boxes to style them using CSS-->
+        <% 3.times do |box| %>
+          <section class="box">
+        <!-- Each box will have nine cells -->
+            <% 3.times do |cell_row| %>
+              <section class="cell_row">
+                <% 3.times do |cell| %>
+                  <section class="cell">
+                <!-- Every cell will have an input field -->
+                  <input type="text">
+                </section>
+               <% end %>
+            </section>
+          <% end %>
+        </section>
+      <% end %>
+      </section>
+    <% end %>
+  </section>
+</body>
+</html>
