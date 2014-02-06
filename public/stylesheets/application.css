@@ -24,7 +24,7 @@ section.box, section.cell {
 }
 
 section.box {
-  border: 3px solid black;
+  outline: 3px ridge black;
 }
 
 body {
