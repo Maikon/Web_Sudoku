@@ -19,7 +19,7 @@ def random_sudoku
 end
 
 def puzzle(sudoku)
-  sudoku.map { |i| rand(1..9) < 5.9 ? 0 : i}
+  sudoku.map { |i| rand < 0.75 ? 0 : i}
 end
 
 

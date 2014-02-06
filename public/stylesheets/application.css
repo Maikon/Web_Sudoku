@@ -12,12 +12,19 @@ section.box, section.cell {
   width: 50px;
   height: 50px;
   border: 1px solid #b3241b;
+  font-family: 'Shojumaru', cursive;
+  font-size: 20px;
+  text-align: center;
 }
 
 #sudoku {
   font-size: 0;
   text-align: center;
   margin-top: 22%;
+}
+
+section.box {
+  border: 3px solid black;
 }
 
 body {
