@@ -1,9 +1,12 @@
 require 'sinatra'
 require 'sinatra/partial'
+require 'rack-flash'
 require_relative './lib/sudoku'
 require_relative './lib/cell'
 
+
 set :partial_template_engine, :erb
+use Rack::Flash
 enable :sessions
 
 
@@ -15,7 +18,24 @@ def random_sudoku
 end
 
 def puzzle(sudoku)
-  sudoku.map { |i| rand(1..9) < 4.1 ? 0 : i}
+  sudoku.map { |i| rand(1..9) < 5.9 ? 0 : i}
+end
+
+
+def generate_new_puzzle_if_necessary
+  return if session[:current_solution]
+  sudoku = random_sudoku
+  session[:solution] = sudoku
+  session[:puzzle] = puzzle(sudoku)
+  session[:current_solution] = session[:puzzle]
+end
+
+def prepare_to_check_solution
+  @check_solution = session[:check_solution]
+  if @check_solution
+    flash[:notice] = "Incorrect values are highlighted in yellow."
+  end
+  session[:check_solution] = nil
 end
 
 def box_order_to_row_order(cells)
@@ -30,19 +50,6 @@ def box_order_to_row_order(cells)
     end
     memo += three_rows_of_three.flatten
   }
-end
-
-def generate_new_puzzle_if_necessary
-  return if session[:current_solution]
-  sudoku = random_sudoku
-  session[:solution] = sudoku
-  session[:puzzle] = puzzle(sudoku)
-  session[:current_solution] = session[:puzzle]
-end
-
-def prepare_to_check_solution
-  @check_solution = session[:check_solution]
-  session[:check_solution] = nil
 end
 
 get '/restart' do
@@ -65,7 +72,7 @@ get '/solution' do
 end
 
 post '/' do
-  cells = params["cell"]
+  cells = box_order_to_row_order(params["cell"])
   session[:current_solution] = cells.map { |value| value.to_i }.join
   session[:check_solution] = true
   redirect to("/")

@@ -7,6 +7,9 @@
 </head>
 <body>
   <h1>Welcome to the Sudoku Domain!</h1>
+  <div id="flash">
+    <%= flash[:notice] %>
+  </div>
   <section id="sudoku">
   <form action="/" method="post">
     <!-- One section for each row -->
