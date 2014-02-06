@@ -28,3 +28,11 @@ body {
 button {
   font-family: 'Shojumaru', cursive;
 }
+
+.incorrect {
+  background-color: #eebb2c;
+}
+
+.value-provided {
+  background-color: #b0b6bb;
+}

@@ -19,12 +19,8 @@
             <% 3.times do |cell_row| %>
               <section class="cell_row">
                 <% 3.times do |cell| %>
-                  <section class="cell">
                 <!-- Every cell will have an input field -->
-                  <% cell_index = row * 27 + box * 3 + cell_row * 9 + cell %>
-                  <% cell_value = @current_solution[cell_index] %>
-                  <input type="text" maxlength="1" autocomplete="off" value="<%= cell_value %>">
-                </section>
+                  <%= partial :cell, :locals=>{:cell_index=>row * 27 + box * 3 + cell_row * 9 + cell}  %>
                <% end %>
             </section>
           <% end %>
