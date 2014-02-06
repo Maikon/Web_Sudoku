@@ -36,6 +36,13 @@ button {
   margin-top: 20px;
   font-family: 'Shojumaru', cursive;
   font-size: 30px;
+  background-color: white;
+}
+
+button:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
 }
 
 .incorrect {
