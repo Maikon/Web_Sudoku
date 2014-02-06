@@ -7,6 +7,7 @@ require_relative './lib/cell'
 
 set :partial_template_engine, :erb
 use Rack::Flash
+set :session_secret, "Secret key here, signing the cookie."
 enable :sessions
 
 
@@ -33,7 +34,8 @@ end
 def prepare_to_check_solution
   @check_solution = session[:check_solution]
   if @check_solution
-    flash[:notice] = "Incorrect values are highlighted in yellow."
+    flash.now[:notice] = "Incorrect values are highlighted in yellow."
+    flash.now[:alert] = true
   end
   session[:check_solution] = nil
 end

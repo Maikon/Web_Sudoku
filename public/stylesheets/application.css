@@ -40,6 +40,10 @@ button {
 }
 
 #flash {
-  margin: 20px;
+  width: 60%;
+  margin: 20px auto;
+  font-size: 19px;
+  padding: 5px;
   background-color: #eebb2c;
+  border: 1px dashed #b3241b;
 }
