@@ -11,7 +11,7 @@ section.box, section.cell {
 .cell input {
   width: 50px;
   height: 50px;
-  border: 1px solid #b3241b;
+  border: 1px solid black;
   font-family: 'Shojumaru', cursive;
   font-size: 20px;
   text-align: center;
@@ -20,7 +20,7 @@ section.box, section.cell {
 #sudoku {
   font-size: 0;
   text-align: center;
-  margin-top: 22%;
+  margin-top: 15%;
 }
 
 section.box {
@@ -33,16 +33,32 @@ body {
 }
 
 button {
+  position: relative;
   margin-top: 20px;
   font-family: 'Shojumaru', cursive;
   font-size: 30px;
   background-color: white;
+  border: 0;
+  box-shadow: -0.5px 4px #a1a7ad;
+  border-radius: 3px;
 }
 
 button:hover {
-  background-color: red;
+  background-color: #e8291d;
+  box-shadow: 0px 4px #9a1a14;
   color: white;
   cursor: pointer;
+}
+
+button:active {
+  position: relative;
+  box-shadow: 0px 1px #9a1a14;
+  background-color: #e8291d;
+  top: 1px;
+}
+
+*:focus {
+  outline: none;
 }
 
 .incorrect {

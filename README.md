@@ -1,4 +1,4 @@
-###Ronin Test/Web Sudoku
+###Web Sudoku
 
 A web based implementation of popular game Sudoku.
 
