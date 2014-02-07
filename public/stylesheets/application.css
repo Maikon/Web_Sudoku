@@ -99,3 +99,31 @@ button:active {
   background-color: #eebb2c;
   border: 1px dashed #b3241b;
 }
+
+/* ===============================
+          Media queries
+   =============================== */
+
+/*      Mobile      */
+
+@media screen and (max-width: 640px) {
+  .cell input {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  #flash {
+    width: 60%;
+    font-size: 10px;
+  }
+}
