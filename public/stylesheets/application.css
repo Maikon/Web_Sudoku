@@ -23,6 +23,10 @@ section.box, section.cell {
   margin-top: 15%;
 }
 
+.container {
+  margin-top: 30px;
+}
+
 /*@-webkit-keyframes flashing-outline {
   from { outline-color: #e8291d;
          box-shadow: 0 0 10px #e8291d;
@@ -40,10 +44,10 @@ section.box, section.cell {
 }
 
 section.box {
-  -webkit-animation-name: flashing-outline;
+ /* -webkit-animation-name: flashing-outline;
   -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;*/
   outline: solid 3px black;
   /*box-shadow: 0 0 32px red;*/
   /*outline: 3px ridge black;*/
@@ -55,7 +59,7 @@ body {
 }
 
 button {
-  position: relative;
+  /*position: relative;*/
   margin-top: 20px;
   font-family: 'Shojumaru', cursive;
   font-size: 30px;
@@ -100,9 +104,39 @@ button:active {
   border: 1px dashed #b3241b;
 }
 
+p {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+.see_solution {
+  margin-top: 20px;
+  font-family: 'Shojumaru', cursive;
+  font-size: 30px;
+  background-color: white;
+  border: 0;
+  box-shadow: -0.5px 4px #a1a7ad;
+  border-radius: 3px;
+  /*float: right;*/
+  margin-left: 50px;
+}
+
 /* ===============================
           Media queries
    =============================== */
+
+/*   Macbook Pro 13'      */
+
+@media screen and (max-width: 1310px) {
+  #sudoku {
+    margin-bottom: 50px;
+  }
+}
 
 /*      Mobile      */
 
@@ -117,13 +151,30 @@ button:active {
   h1 {
     font-size: 20px;
   }
-
   button {
     font-size: 12px;
+  }
+
+  form {
+    display: inline-block;
+    margin: 60px;
+  }
+
+  .check_solution {
+    float: left;
+  }
+
+  .see_solution {
+    float: left;
   }
 
   #flash {
     width: 60%;
     font-size: 10px;
   }
+
+  #sudoku {
+    margin-bottom: 50px;
+  }
 }
+

@@ -1,36 +1,40 @@
-  <h1>Welcome to the Sudoku Domain!</h1>
-    <% if flash[:notice] %>
-      <div id="flash">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-  <section id="sudoku">
-  <form action="/" method="post">
-    <!-- One section for each row -->
-    <% 3.times do |row| %>
-      <section class="row">
-      <!-- We want to create separate div elements for boxes to style them using CSS-->
-        <% 3.times do |box| %>
-          <section class="box">
-        <!-- Each box will have nine cells -->
-            <% 3.times do |cell_row| %>
-              <section class="cell_row">
-                <% 3.times do |cell| %>
-                <!-- Every cell will have an input field -->
-                  <%= partial :cell, :locals=>{:cell_index=>row * 27 + box * 3 + cell_row * 9 + cell}  %>
-               <% end %>
-            </section>
-          <% end %>
-        </section>
-      <% end %>
+<h1>Welcome to the Sudoku Domain!</h1>
+  <% if flash[:notice] %>
+    <div id="flash">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+<section id="sudoku">
+<form action="/" method="post" class="check_solution">
+  <!-- One section for each row -->
+  <button>Check Solution</button>
+  <p><a class="see_solution" href="/solution">See Solution</a></p>
+  <div class="container">
+  <% 3.times do |row| %>
+    <section class="row">
+    <!-- We want to create separate div elements for boxes to style them using CSS-->
+      <% 3.times do |box| %>
+        <section class="box">
+      <!-- Each box will have nine cells -->
+          <% 3.times do |cell_row| %>
+            <section class="cell_row">
+              <% 3.times do |cell| %>
+              <!-- Every cell will have an input field -->
+                <%= partial :cell, :locals=>{:cell_index=>row * 27 + box * 3 + cell_row * 9 + cell}  %>
+             <% end %>
+          </section>
+        <% end %>
       </section>
     <% end %>
-      <button>Check Solution</button>
-    </form>
-    <form action="/solution" method="get">
-      <button>See Solution</button>
-    </form>
-    <form action="/restart" method="get">
-      <button>Restart Session</button>
-    </form>
-  </section>
+    </section>
+  <% end %>
+  </div>
+    <!-- <button>Check Solution</button> -->
+  </form>
+  <!-- <form action="/solution" method="get" class="see_solution">
+    <button>See Solution</button>
+  </form>
+  <form action="/restart" method="get" class="restart">
+    <button>Restart Session</button>
+  </form> -->
+</section>
