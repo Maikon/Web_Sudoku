@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'shotgun'
-gem 'sinatra-partial'
-gem 'rack-flash3'
+group :production do
+  gem 'sinatra'
+  gem 'sinatra-partial'
+  gem 'rack-flash3'
+end
+
+group :development do
+  gem 'shotgun'
+end

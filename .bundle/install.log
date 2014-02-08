@@ -20,3 +20,11 @@ I, [2014-02-06T09:24:05.106136 #1510]  INFO -- : 0:  tilt (1.4.1) from /Users/ma
 I, [2014-02-06T09:24:05.106391 #1510]  INFO -- : 0:  sinatra (1.4.4) from /Users/makis/.rvm/gems/ruby-2.1.0/specifications/sinatra-1.4.4.gemspec
 I, [2014-02-06T09:24:05.106647 #1510]  INFO -- : 0:  sinatra-partial (0.4.0) from /Users/makis/.rvm/gems/ruby-2.1.0/specifications/sinatra-partial-0.4.0.gemspec
 I, [2014-02-06T09:24:05.106891 #1510]  INFO -- : 0:  bundler (1.5.1) from /Users/makis/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.1.gemspec
+I, [2014-02-08T22:32:24.620343 #32768]  INFO -- : 0:  rack (1.5.2) from /Users/makis/.rvm/gems/ruby-2.1.0/specifications/rack-1.5.2.gemspec
+I, [2014-02-08T22:32:24.623654 #32768]  INFO -- : 0:  rack-flash3 (1.0.5) from /Users/makis/.rvm/gems/ruby-2.1.0/specifications/rack-flash3-1.0.5.gemspec
+I, [2014-02-08T22:32:24.623976 #32768]  INFO -- : 0:  rack-protection (1.5.2) from /Users/makis/.rvm/gems/ruby-2.1.0/specifications/rack-protection-1.5.2.gemspec
+I, [2014-02-08T22:32:24.624245 #32768]  INFO -- : 0:  shotgun (0.9) from /Users/makis/.rvm/gems/ruby-2.1.0/specifications/shotgun-0.9.gemspec
+I, [2014-02-08T22:32:24.624510 #32768]  INFO -- : 0:  tilt (1.4.1) from /Users/makis/.rvm/gems/ruby-2.1.0/specifications/tilt-1.4.1.gemspec
+I, [2014-02-08T22:32:24.624774 #32768]  INFO -- : 0:  sinatra (1.4.4) from /Users/makis/.rvm/gems/ruby-2.1.0/specifications/sinatra-1.4.4.gemspec
+I, [2014-02-08T22:32:24.625035 #32768]  INFO -- : 0:  sinatra-partial (0.4.0) from /Users/makis/.rvm/gems/ruby-2.1.0/specifications/sinatra-partial-0.4.0.gemspec
+I, [2014-02-08T22:32:24.625310 #32768]  INFO -- : 0:  bundler (1.5.1) from /Users/makis/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.1.gemspec
