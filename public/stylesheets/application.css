@@ -1,9 +1,25 @@
+* {
+  margin: 0;
+}
+
 html {
   background: url(../img/SHADOW-SAMURAI.jpg) no-repeat center 23% fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  height: 100%;
+  width: 100%;
 }
+
+body {
+  padding: 0;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0px;
+}
+
 section.box, section.cell {
   display: inline-block;
 }
@@ -24,17 +40,17 @@ section.box, section.cell {
 }
 
 .container {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 
-@-webkit-keyframes flashing-outline {
-  from { /*outline-color: #e8291d;*/
+/*@-webkit-keyframes flashing-outline {
+  from { outline-color: #e8291d;
          box-shadow: 0 0 10px #e8291d;
        }
-  to { /*outline-color: #9a1a14;*/
+  to { outline-color: #9a1a14;
        box-shadow: 0 0 60px #9a1a14;}
-}
+}*/
 
 section.box {
   outline: solid 3px black;
@@ -46,7 +62,6 @@ body {
 }
 
 button {
-  margin-top: 20px;
   font-family: 'Shojumaru', cursive;
   font-size: 30px;
   background-color: white;
@@ -101,6 +116,7 @@ a {
 }
 
 .see_solution, .restart {
+  margin-bottom: 10px;
   font-family: 'Shojumaru', cursive;
   font-size: 30px;
   background-color: white;
@@ -117,49 +133,44 @@ a {
   margin-left: 20px;
 }
 
+header {
+  background: #e8291d;
+  width: 100%;
+  margin: 0;
+  border-bottom: 2px solid black;
+}
+
 /* ===============================
           Media queries
    =============================== */
 
-/*   Macbook Pro 13'      */
-
-/*@media screen and (max-width: 1310px) {
-  #sudoku {
-    margin-bottom: 50px;
-  }
-}*/
-
 /*      Mobile      */
 
-@media screen and (max-width: 640px) {
+@media screen and (max-device-width: 641px) {
+
   .cell input {
-    width: 25px;
-    height: 25px;
-    font-size: 12px;
-    text-align: center;
+    width: 65px;
+    height: 65px;
+    font-size: 18px;
     -webkit-border-radius: 0;
   }
 
-  #sudoku {
-    margin-top: 25%;
-  }
-
   h1 {
-    font-size: 20px;
-  }
-  button {
-    font-size: 12px;
-  }
-
-  form {
-    display: inline-block;
-    margin: 60px;
+    font-size: 40px;
   }
 
   #flash {
-    width: 60%;
-    font-size: 10px;
+    font-size: 30px;
+    padding: 15px;
   }
 
+
+  #sudoku {
+    margin-top: 17%;
+  }
+
+  .see_solution, .restart {
+    margin-bottom: 20px;
+  }
 }
 
