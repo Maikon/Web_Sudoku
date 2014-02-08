@@ -1,0 +1,18 @@
+<% 3.times do |row| %>
+    <section class="row">
+    <!-- We want to create separate div elements for boxes to style them using CSS-->
+      <% 3.times do |box| %>
+        <section class="box">
+      <!-- Each box will have nine cells -->
+          <% 3.times do |cell_row| %>
+            <section class="cell_row">
+              <% 3.times do |cell| %>
+              <!-- Every cell will have an input field -->
+                <%= partial :cell, :locals=>{:cell_index=>row * 27 + box * 3 + cell_row * 9 + cell}  %>
+             <% end %>
+          </section>
+        <% end %>
+      </section>
+    <% end %>
+    </section>
+  <% end %>
