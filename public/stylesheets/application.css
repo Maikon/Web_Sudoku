@@ -27,13 +27,6 @@ section.box, section.cell {
   margin-top: 30px;
 }
 
-/*@-webkit-keyframes flashing-outline {
-  from { outline-color: #e8291d;
-         box-shadow: 0 0 10px #e8291d;
-       }
-  to { outline-color: #9a1a14;
-       box-shadow: 0 0 60px #9a1a14;}
-}*/
 
 @-webkit-keyframes flashing-outline {
   from { /*outline-color: #e8291d;*/
@@ -44,13 +37,7 @@ section.box, section.cell {
 }
 
 section.box {
- /* -webkit-animation-name: flashing-outline;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;*/
   outline: solid 3px black;
-  /*box-shadow: 0 0 32px red;*/
-  /*outline: 3px ridge black;*/
 }
 
 body {
@@ -59,7 +46,6 @@ body {
 }
 
 button {
-  /*position: relative;*/
   margin-top: 20px;
   font-family: 'Shojumaru', cursive;
   font-size: 30px;
@@ -121,8 +107,6 @@ a {
   border: 0;
   box-shadow: -0.5px 4px #a1a7ad;
   border-radius: 3px;
-  /*float: right;*/
-  /*margin-left: 50px;*/
 }
 
 .see_solution {
