@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'newrelic_rpm'
+
 group :production do
   gem 'sinatra'
   gem 'sinatra-partial'
