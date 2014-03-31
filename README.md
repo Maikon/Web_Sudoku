@@ -18,3 +18,5 @@ The following pictures show a puzzle before and after it has been solved to give
 ![solved](/public/img/sudoku_solved.png)
 
 Images courtesy of Wikipedia where you can find more [information](http://en.wikipedia.org/wiki/Sudoku).
+
+The current implementation can be found [here](http://samurai-sudoku.herokuapp.com).
