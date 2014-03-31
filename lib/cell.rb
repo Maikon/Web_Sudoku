@@ -1,7 +1,6 @@
 require 'set'
 
 class Cell
-
   attr_reader :slices, :value
 
   def initialize(value)
@@ -14,17 +13,17 @@ class Cell
   end
 
   def solved?
-  	@value && @value != 0
+    @value && @value != 0
   end
 
   def to_s
-  	return '_' unless solved?
-  	@value.to_s
+    return '_' unless solved?
+    @value.to_s
   end
 
   def solve!
-  	return if solved?  	
-  	assume(candidates.first) if candidates.length == 1
+    return if solved?
+    assume(candidates.first) if candidates.length == 1
   end
 
   def assume(value)
@@ -36,7 +35,6 @@ class Cell
   end
 
   def neighbours
-  	@slices.flatten.map(&:value).inject(Set.new) {|set, digit| set << digit}.delete(0)
+    @slices.flatten.map(&:value).inject(Set.new) { |set, digit| set << digit }.delete(0)
   end
-  
 end
